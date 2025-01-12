@@ -70,9 +70,9 @@ const Burgers = () => {
             className="relative w-60"
           />
           <div className="relative text-white px-6 pb-6 mt-6">
-            <span className="block opacity-75 -mb-1">{product.cetagory}</span>
-            <div className="flex justify-between">
-              <span className="block font-semibold text-sm">
+            <span className="block opacity-75 -mb-2">{product.cetagory}</span>
+            <div className="flex justify-between mt-3"> 
+              <span className="block font-bold text-sm mr-4"> {/* Added margin-right here */}
                 {product.title}
               </span>
               <span className="ml-1 block bg-white rounded-full text-black text-xs font-bold px-3 py-2 leading-none items-center">

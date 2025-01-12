@@ -4,7 +4,7 @@ import Image from "next/image";
 const Banner = () => {
   return (
     <div className="relative overflow-hidden bg-black font-sans px-6 py-12 mb-7">
-      <div className="absolute inset-0 opacity-20">
+      <div className="mx-4 absolute inset-0 opacity-20 ">
         <Image
           src="/burgerpoint.jpg"
           alt="Delicious Burger Banner"

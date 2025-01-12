@@ -54,28 +54,28 @@ const Menu = () => {
       ></div>
 
       <div className="relative z-10">
-        <div className="max-w-6xl mx-auto text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-4">
-            Delicious Burgers Of our Menu
-          </h1>
-          <p className="text-xl text-white">
-            Order Now! Explore our mouthwatering Burgers
-          </p>
-        </div>
+      <div className="max-w-6xl mx-auto text-center mb-4"> {/* Reduced margin bottom */}
+  <h1 className="text-4xl font-bold text-white mb-2"> {/* Reduced margin bottom */}
+    Delicious Burgers Of our Menu
+  </h1>
+  <p className="text-lg md:text-xl text-white mb-4"> {/* Reduced margin bottom */}
+    Order Now! Explore our mouthwatering Burgers
+  </p>
+</div>
 
-        {/* Product section */}
-        <div className="max-w-6xl mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-red-600">
-          {products.map((product) => (
-            <ProductCard
-              key={product.id}
-              {...product}
-              onAddToCart={addToCart}
-            />
-          ))}
-        </div>
+{/* Product section */}
+<div className="max-w-6xl mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm md:text-lg mb-8 text-red-600"> {/* Reduced gap */}
+  {products.map((product) => (
+    <ProductCard
+      key={product.id}
+      {...product}
+      onAddToCart={addToCart}
+    />
+  ))}
+</div>
 
 {/* Cart Section */}
-<div className="flex flex-col items-center max-w-6xl mx-auto mt-8 p-4 md:p-6 md:mx-auto text-center">
+<div className="flex flex-col items-center max-w-6xl mx-auto mt-4 p-4 md:p-6 mb-9 md:mx-auto text-center"> {/* Reduced margin top */}
   <button
     onClick={toggleCart}
     className="bg-yellow-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-red-600 transition duration-200 ease-in-out transform mx-auto"
@@ -84,7 +84,7 @@ const Menu = () => {
   </button>
 
   {showCart && (
-    <div className="mt-6 bg-white md:p-6 p-4 rounded-lg shadow max-w-full w-full md:max-w-4xl flex flex-col items-center">
+    <div className="mt-4 bg-white md:p-6 p-4 rounded-lg shadow max-w-full w-full md:max-w-4xl flex flex-col items-center"> {/* Reduced margin top */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-yellow-600">
         Your Cart Items Include:
       </h2>
@@ -94,7 +94,7 @@ const Menu = () => {
             {cart.map((product, index) => (
               <li
                 key={index}
-                className="flex flex-col sm:flex-row items-center justify-center mb-6 transform transition-all duration-300 ease-in-out"
+                className="flex flex-col sm:flex-row items-center justify-center mb-4 transform transition-all duration-300 ease-in-out" /* Reduced margin bottom */
               >
                 <Image
                   src={product.image}
@@ -103,7 +103,7 @@ const Menu = () => {
                   height={160}
                   className="inline-block transition-transform duration-300 ease-in-out"
                 />
-                <span className="mt-2 sm:mt-0 sm:ml-4 text-lg font-medium text-slate-600 text-center sm:text-left">
+                <span className=" sm:mt-0 sm:ml-4 text-lg mt-52 font-medium text-slate-600 text-center sm:text-left">
                   {product.name} - ${product.price}
                 </span>
               </li>
@@ -140,6 +140,7 @@ const Menu = () => {
     </div>
   )}
 </div>
+
 
 
         {/* Checkout Section */}

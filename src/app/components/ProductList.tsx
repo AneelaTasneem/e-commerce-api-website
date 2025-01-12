@@ -36,7 +36,7 @@ const ProductList = () => {
       {products.map((product) => (
         <div
           key={product.id}
-          className={`flex flex-col items-center m-6 relative overflow-hidden ${product.bgColor} rounded-lg shadow-lg group max-w-sm w-60 h-80`}
+          className={`flex flex-col items-center mt-10 m-6 relative overflow-hidden ${product.bgColor} rounded-lg shadow-lg group max-w-sm w-60 h-80`}
         >
           {/* Background Design */}
           <svg
@@ -63,18 +63,18 @@ const ProductList = () => {
               fill="white"
             />
           </svg>
-          <div className="reative pt-10 flex items-center justify-center group-hover:scale-110 transition-transform"></div>
+          <div className="relative pt-10 flex items-center justify-center group-hover:scale-110 transition-transform"></div>
           <Image
             src={product.imgurl}
             alt={product.title}
-            width={100} 
+            width={100}
             height={100}
-            className=" relative w-60  "
+            className="relative w-60"
           />
           <div className="relative text-white px-6 pb-6 mt-6">
             <span className="block opacity-75 -mb-1">{product.cetagory}</span>
-            <div className="flex justify-between">
-              <span className="block font-semibold text-sm">
+            <div className="flex justify-between mt-3"> {/* Added margin-top for spacing */}
+              <span className="block font-semibold text-sm mr-4"> {/* Added margin-right for spacing */}
                 {product.title}
               </span>
               <span className="ml-1 block bg-white rounded-full text-black text-xs font-bold px-3 py-2 leading-none items-center">
