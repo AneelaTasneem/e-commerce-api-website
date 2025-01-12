@@ -31,9 +31,10 @@ const Navbar = () => {
                 </p>
               </div>
 
-              <div className="relative inline-flex items-center justify-center w-10 h-10 rounded-full ring-2 ring-red-600 hover:ring-yellow-500">
-  <FaCartShopping className="text-red-600 w-6 h-6 hover:text-yellow-500" />
+              <div className="relative items-center justify-center w-8 h-8 rounded-full ring-2 ring-red-600 hover:ring-yellow-500 ml-auto hidden lg:block md:block mr-8">
+  <FaCartShopping className="text-red-600 w-6 h-6 hover:text-yellow-500 mt-1 min-w-4" />
 </div>
+
 
             </div>
           </div>
